@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/contato', function () {
     $message = 'Contato';
-    return ($message) ;
+    return ($message) ; 
+    
 });
 
 Route::get('/', function () {
