@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/contato', function () {
+    $message = 'Contato';
+    return ($message) ;
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
