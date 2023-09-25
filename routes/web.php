@@ -23,12 +23,16 @@ Route::get('/contato', function () {
 Route::get('/', 'App\Http\Controllers\PrincipalController@principal')->name('site.principal');
 Route::get('/sobrenos', 'App\Http\Controllers\SobreNosController@principal')->name('site.sobrenos');
 Route::get('/contato', 'App\Http\Controllers\ContatoController@principal')->name('site.contato');
+Route::post('/contato', 'App\Http\Controllers\ContatoController@contato')->name('site.contato');
+Route::get('/login', function(){return 'Login';})->name('site.login');
 
-Route::prefix('/admin')->group (function() {
-    Route::get('/clientes', function(){return 'Clientes';});
-    Route::get('/fornecedores', 'App\Http\Controllers\FornecedorController@index')->name('admin.fornecedores');
-    Route::get('/produtos', function(){return 'Produtos';});
+
+Route::prefix('/app')-> group (function(){
+    Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
+    Route::get('/fornecedores', 'App\Http\Controllers\FornecedorController@index')->name('app.fornecedores');
+    Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
 });
+
 
 Route::get('/admin', function() {
     return redirect()->route('site.index');
