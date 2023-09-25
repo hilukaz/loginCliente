@@ -13,6 +13,7 @@
                     {{-- 
                         asset
                         Usado para referenciar um arquivo da pasta public
+                        para css ele pode se direcionar nos css tanto do resource quanto da pasta public
                     --}}
                     <img src="{{ asset('img/check.png') }}">
                     <span class="texto-branco">Gestão completa e descomplicada</span>

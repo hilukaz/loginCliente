@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Super Gestão - @yield('titulo')</title>
+    <title>Super Gestão - @yield('titulo') </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('css/estilo_basico.css') }}">
 </head>

@@ -1,6 +1,6 @@
 @extends('site.layout.basico')
 
-@section('titulo', $titulo)
+@section('titulo', '$titulo')
 
 @section('conteudo')
     <div class="conteudo-pagina">
@@ -10,10 +10,11 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-                {{-- Incluindo o código do formulário --}}
-                @components('site.layout._components.form_contato')
+                @component('site.layout._components.form_contato')
+
                 <p> LOGO ENTRAREMOS EM CONTATO </p>
                 <p> NOSSO TEMPO MÉDIO DE RESPOSTA É 48 HORAS </p>
+                {{--esse código será estruturado no slot da pasta _component--}}
                 @endcomponent
             </div>
         </div>
@@ -21,12 +22,12 @@
 
     <div class="rodape">
         <div class="redes-sociais">
-            <h2>Redes Sociais</h2>
+            <h2>Redes sociais</h2>
             <img src=" {{ asset('img/facebook.png') }} ">
             <img src=" {{ asset('img/linkedin.png') }} ">
             <img src=" {{ asset('img/youtube.png') }} ">
         </div>
-        <div class="arma-contato">
+        <div class="area-contato">
             <h2>Contato</h2>
             <span>(11) 3333-4444</span>
             <br>
